@@ -1,0 +1,56 @@
+/* some style */
+.main {
+  display: flex;
+  flex-direction: "row";
+}
+
+.small-button-class{
+  align-self: center;
+}
+
+.button {
+  width : 16px;
+  height : 16px;
+  border-radius: 8px;
+  background-color: orangered;
+  margin-right: 20px;
+  animation-name: gravity;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /*position: absolute;;*/
+}
+
+.big-button {
+  width : 60px;
+  height :  60px;
+  border-radius: 30px;
+  background-color: orangered;
+  z-index: 1;
+  animation-name: colourChange;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /*position: relative;*/
+}
+
+@keyframes gravity{
+  0%, 100% {
+    transform: translateX(0) ;
+    background-color: orangered
+  }
+  50% {
+    transform: translateX(116px);
+    background-color: blue;
+  }
+}
+
+@keyframes colourChange {
+  0%, 100% {
+    background-color: orangered;
+  }
+  20%{
+    background-color: orangered;
+  }
+  65%{
+    background-color: blue;
+  }
+}
